@@ -1,7 +1,7 @@
 
 
 
-operationHandler((firstNumber, secondNumber, operation) => {
+function operationHandler(firstNumber, secondNumber, operation){
   if (operation == "+") {
     console.log(`Esta es la operacion ${operation} entre
          ${firstNumber} y el segundo numero  ${secondNumber}`);
@@ -21,6 +21,6 @@ operationHandler((firstNumber, secondNumber, operation) => {
     console.log(`Esta es la operacion ${operation} entre
          ${firstNumber} y el segundo numero  ${secondNumber}`);
   }
-});
+};
 
-export { operationHandler };
+export {operationHandler};
