@@ -7,10 +7,13 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+          <div class="col-8 calculadora-display">0</div>
+      </div>
+        <div class="row">
         <div class="col-8">
-          <button class="operation">+</button>
+          <button class="operation" data-operator="+">+</button>
           <button class="number">0</button>
-          <button class="operation">-</button>
+          <button class="operation" data-operator="-">-</button>
         </div>
         <div class="col-8">
           <button class="number">1</button>
@@ -26,9 +29,10 @@
           <button class="number">7</button>
           <button class="number">8</button>
           <button class="number">9</button>
+          <button class="decimal">.</button>
         </div>
       </div>
     </div>
-    <script src="/caculadora.js"></script>
+    <script src="js/caculadora.js"></script>
   </body>
 </html>
