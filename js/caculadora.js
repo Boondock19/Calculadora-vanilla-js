@@ -54,28 +54,38 @@ document.addEventListener("DOMContentLoaded", function () {
   results=document.querySelector(".result")
   results.addEventListener("click",function(){
     secondNumber=displayCalculator
-    operationHandler(firstNumber,secondNumber,operation)    
+    result=operationHandler(firstNumber,secondNumber,operation)
+    display.innerHTML=result
+    console.log(result)    
   })
 
+  // We need to reset the calculator with the button CE
+  restart=document.querySelector(".CE")
+  restart.addEventListener("click",function(){
+    displayCalculator=0
+    display.innerHTML=displayCalculator
+    firstNumber=0
+    secondNumber=0
+  })
+  //Functions for the calculator to work
+
   function operationHandler(firstNumber, secondNumber, operation){
+    const a = Number(firstNumber)
+    const b = Number(secondNumber)
     if (operation == "+") {
-      console.log(`Esta es la operacion ${operation} entre
-           ${firstNumber} y el segundo numero  ${secondNumber}`);
+      return a+b
     } else if (operation == "-") {
-      console.log(`Esta es la operacion ${operation} entre
-           ${firstNumber} y el segundo numero  ${secondNumber}`);
+      return a-b
     } else if (operation == "x") {
-      console.log(`Esta es la operacion ${operation} entre
-           ${firstNumber} y el segundo numero  ${secondNumber}`);
+      return a*b
     } else if (operation == "/") {
-      console.log(`Esta es la operacion ${operation} entre
-           ${firstNumber} y el segundo numero  ${secondNumber}`);
+      return a/b
     } else if (operation == "%") {
-      console.log(`Esta es la operacion ${operation} entre
-           ${firstNumber} y el segundo numero  ${secondNumber}`);
+      // a will be the number we want to kwon the % and b will be the desired %
+      return a * (b/100)
     } else if (operation == "mod") {
-      console.log(`Esta es la operacion ${operation} entre
-           ${firstNumber} y el segundo numero  ${secondNumber}`);
+      return a%b
     }
   };
+
 });
